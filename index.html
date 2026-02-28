@@ -1,10 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoyalFlush Trading | IT Services & Support</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#333;
+}
+
+header{
+    background:#0b1f3a;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    max-width:800px;
+    margin:auto;
+}
+
+.cta-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#ffb000;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0b1f3a;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-box{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:8px;
+}
+
+.contact{
+    background:#f9f9f9;
+}
+
+footer{
+    background:#0b1f3a;
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+footer a{
+    color:#ffb000;
+    text-decoration:none;
+}
+
+form input, form textarea{
+    width:100%;
+    padding:10px;
+    margin-top:8px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+form button{
+    background:#0b1f3a;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 18px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+}
+</style>
 </head>
-<body style="font-family: Arial; text-align:center; margin-top:100px;">
-    <h1>Welcome to my website</h1>
-    <p>This site is hosted for FREE.</p>
+
+<body>
+
+<header>
+<h1>RoyalFlush Trading (Pty) Ltd</h1>
+<p>Professional IT services, software development, networking and technical support solutions for businesses, institutions and organisations across South Africa.</p>
+<a class="cta-btn" href="#contact">Request IT Support</a>
+</header>
+
+<section>
+<h2>About Us</h2>
+<p>
+RoyalFlush Trading (Pty) Ltd is an Information Technology solutions provider based in Bloemfontein, South Africa. Our team consists of experienced IT specialists and programmers with expertise in software development, systems administration, networking technologies and data solutions.
+</p>
+<p>
+We support organisations in both the public and private sector by designing, implementing and maintaining modern IT environments. Our goal is to improve productivity, efficiency and security through reliable technology solutions.
+</p>
+<p>
+We follow structured service delivery processes, clear reporting and preventative maintenance procedures to ensure accountability and dependable service. We are capable of supporting government departments, schools, municipalities, SMMEs and corporate clients under service level agreements (SLAs).
+</p>
+</section>
+
+<section>
+<h2>Our Services</h2>
+<div class="services">
+
+<div class="service-box">
+<h3>Software Development</h3>
+<p>Custom business systems, web applications and automation tools tailored to organisational requirements.</p>
+</div>
+
+<div class="service-box">
+<h3>IT Support & Maintenance</h3>
+<p>Onsite and remote technical support, troubleshooting, installations, upgrades and preventative maintenance.</p>
+</div>
+
+<div class="service-box">
+<h3>Networking & Infrastructure</h3>
+<p>LAN, Wi-Fi, router configuration, connectivity troubleshooting and network installations.</p>
+</div>
+
+<div class="service-box">
+<h3>Server Administration</h3>
+<p>Windows and Linux server setup, backups, monitoring, security policies and system management.</p>
+</div>
+
+<div class="service-box">
+<h3>Database Solutions</h3>
+<p>Database setup, data organization, data storage systems and performance optimization.</p>
+</div>
+
+<div class="service-box">
+<h3>IT Consulting</h3>
+<p>Technology planning, IT procurement advice and infrastructure improvement strategies.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+
+<p><strong>Phone:</strong> <a href="tel:0817078147">081 707 8147</a></p>
+<p><strong>Email:</strong> <a href="mailto:admin@royalflushtrading.co.za">admin@royalflushtrading.co.za</a></p>
+<p><strong>Location:</strong> Bloemfontein, Free State, South Africa</p>
+
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="text" placeholder="Phone Number">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+<h3>RoyalFlush Trading (Pty) Ltd</h3>
+<p>Bloemfontein, Free State, South Africa</p>
+<p>Phone: 081 707 8147 | Email: admin@royalflushtrading.co.za</p>
+<p>Business Hours: Monday – Friday 08:00 – 17:00</p>
+<p>© 2026 RoyalFlush Trading (Pty) Ltd. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27817078147" target="_blank">WhatsApp</a>
+
 </body>
 </html>

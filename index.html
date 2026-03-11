@@ -208,12 +208,12 @@ message: formData.get("message")
 };
 
 await fetch("https://send-email.royalflushweeklytrading.workers.dev/", {
-method: "POST",
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify(data)
+method:"POST",
+headers:{ "Content-Type":"application/json" },
+body:JSON.stringify(data)
 });
+
+alert("Message sent successfully!");
 
 window.location.href="/thankyou.html";
 
@@ -236,6 +236,7 @@ window.location.href="/thankyou.html";
 
 </body>
 </html>
+
 
 
 

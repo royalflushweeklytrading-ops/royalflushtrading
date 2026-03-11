@@ -114,37 +114,6 @@ form button{
 </style>
 </head>
 
-
-    <script>
-const form = document.getElementById("contactForm");
-
-form.addEventListener("submit", async function(e){
-
-e.preventDefault();
-
-const formData = new FormData(form);
-
-const data = {
-email: formData.get("email"),
-message: formData.get("message")
-};
-
-const response = await fetch("https://send-email.royalflushweeklytrading.workers.dev/", {
-method:"POST",
-headers:{ "Content-Type":"application/json" },
-body:JSON.stringify(data)
-});
-
-const result = await response.text();
-
-console.log("Worker response:", result);
-
-alert(result);
-
-});
-</script>
-
-    
 <body>
 
 <header>
@@ -226,6 +195,18 @@ Your message:
 
 </form>
 
+</section>
+
+<footer>
+<h3>RoyalFlush Trading (Pty) Ltd</h3>
+<p>Bloemfontein, Free State, South Africa</p>
+<p>Phone: 081 707 8147 | Email: admin@royalflushtrading.co.za</p>
+<p>Business Hours: Monday – Friday 08:00 – 17:00</p>
+<p>© 2026 RoyalFlush Trading (Pty) Ltd. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27817078147" target="_blank">WhatsApp</a>
+
 <script>
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 
@@ -251,33 +232,5 @@ window.location.href="/thankyou.html";
 });
 </script>
 
-
-
-</section>
-
-<footer>
-<h3>RoyalFlush Trading (Pty) Ltd</h3>
-<p>Bloemfontein, Free State, South Africa</p>
-<p>Phone: 081 707 8147 | Email: admin@royalflushtrading.co.za</p>
-<p>Business Hours: Monday – Friday 08:00 – 17:00</p>
-<p>© 2026 RoyalFlush Trading (Pty) Ltd. All Rights Reserved.</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/27817078147" target="_blank">WhatsApp</a>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

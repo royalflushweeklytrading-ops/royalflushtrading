@@ -179,30 +179,20 @@ We follow structured service delivery processes, clear reporting and preventativ
 <p><strong>Email:</strong> <a href="mailto:admin@royalflushtrading.co.za">admin@royalflushtrading.co.za</a></p>
 <p><strong>Location:</strong> Bloemfontein, Free State, South Africa</p>
 
-<form name="contact" method="POST" action="/" netlify>
-
-<input type="hidden" name="form-name" value="contact">
-
-<p>
-<input type="text" name="fullname" placeholder="Full Name" required>
-</p>
-
-<p>
-<input type="email" name="email" placeholder="Email Address" required>
-</p>
-
-<p>
-<input type="text" name="phone" placeholder="Phone Number">
-</p>
-
-<p>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-</p>
-
-<p>
-<button type="submit">Send Message</button>
-</p>
-
+<form
+  action="https://formspree.io/f/mojkvvwo"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
 </form>
 
 
@@ -221,6 +211,7 @@ We follow structured service delivery processes, clear reporting and preventativ
 
 </body>
 </html>
+
 
 
 

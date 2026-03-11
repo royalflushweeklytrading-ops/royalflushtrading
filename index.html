@@ -183,16 +183,28 @@ We follow structured service delivery processes, clear reporting and preventativ
   action="https://formspree.io/f/mojkvvwo"
   method="POST"
 >
+
   <label>
     Your email:
-    <input type="email" name="email">
+    <input type="email" name="email" required>
   </label>
+
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea name="message" required></textarea>
   </label>
-  <!-- your other form fields go here -->
+
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="New message from RoyalFlush Trading website">
+
+  <!-- Redirect after submission -->
+  <input type="hidden" name="_next" value="https://royalflushtrading.co.za/thankyou.html">
+
+  <!-- Spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
+
   <button type="submit">Send</button>
+
 </form>
 
 
@@ -211,6 +223,7 @@ We follow structured service delivery processes, clear reporting and preventativ
 
 </body>
 </html>
+
 
 
 

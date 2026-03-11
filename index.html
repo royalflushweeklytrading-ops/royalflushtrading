@@ -179,31 +179,25 @@ We follow structured service delivery processes, clear reporting and preventativ
 <p><strong>Email:</strong> <a href="mailto:admin@royalflushtrading.co.za">admin@royalflushtrading.co.za</a></p>
 <p><strong>Location:</strong> Bloemfontein, Free State, South Africa</p>
 
-<form
-  action="https://formspree.io/f/mojkvvwo"
-  method="POST"
->
+<form action="https://formspree.io/f/mojkvvwo" method="POST">
 
-  <label>
-    Your email:
-    <input type="email" name="email" required>
-  </label>
+<label>
+Your email:
+<input type="email" name="email" required>
+</label>
 
-  <label>
-    Your message:
-    <textarea name="message" required></textarea>
-  </label>
+<label>
+Your message:
+<textarea name="message" required></textarea>
+</label>
 
-  <!-- Email subject -->
-  <input type="hidden" name="_subject" value="New message from RoyalFlush Trading website">
+<input type="hidden" name="_subject" value="New message from RoyalFlush Trading website">
 
-  <!-- Redirect after submission -->
-  <!-- <input type="hidden" name="_next" value="https://royalflushtrading.co.za/thankyou.html"> -->
-  <input type="hidden" name="_next" value="/thankyou.html">
-  <!-- Spam protection -->
-  <input type="text" name="_gotcha" style="display:none">
+<input type="hidden" name="_redirect" value="https://royalflushtrading.royalflushweeklytrading.workers.dev/thankyou.html">
 
-  <button type="submit">Send</button>
+<input type="text" name="_gotcha" style="display:none">
+
+<button type="submit">Send</button>
 
 </form>
 
@@ -223,6 +217,7 @@ We follow structured service delivery processes, clear reporting and preventativ
 
 </body>
 </html>
+
 
 
 

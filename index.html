@@ -6,137 +6,278 @@
 <title>RoyalFlush Trading | IT Services & Support</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
-    color:#333;
+
+html{
+scroll-behavior:smooth;
 }
 
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+color:#333;
+background:#fafafa;
+}
+
+/* NAVBAR */
+
+nav{
+background:#0b1f3a;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+margin:0;
+font-size:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffb000;
+}
+
+/* HERO */
+
 header{
-    background:#0b1f3a;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
+background:linear-gradient(rgba(11,31,58,0.85), rgba(11,31,58,0.85)),
+url("https://images.unsplash.com/photo-1519389950473-47ba0277781c");
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 20px;
+text-align:center;
 }
 
 header h1{
-    font-size:42px;
-    margin-bottom:10px;
+font-size:48px;
+margin-bottom:10px;
 }
 
 header p{
-    font-size:18px;
-    max-width:800px;
-    margin:auto;
+font-size:20px;
+max-width:800px;
+margin:auto;
 }
 
 .cta-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 28px;
-    background:#ffb000;
-    color:black;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:5px;
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#ffb000;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+transition:0.3s;
 }
 
+.cta-btn:hover{
+background:#ffcc33;
+}
+
+/* SECTIONS */
+
 section{
-    padding:60px 20px;
-    max-width:1100px;
-    margin:auto;
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#0b1f3a;
+text-align:center;
+margin-bottom:40px;
+color:#0b1f3a;
+font-size:32px;
 }
 
+/* ABOUT */
+
+.about p{
+max-width:900px;
+margin:auto;
+margin-bottom:15px;
+text-align:center;
+}
+
+/* SERVICES */
+
 .services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .service-box{
-    background:#f4f4f4;
-    padding:20px;
-    border-radius:8px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+
+.service-box:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.service-box h3{
+color:#0b1f3a;
+margin-top:0;
+}
+
+/* CONTACT */
 
 .contact{
-    background:#f9f9f9;
+background:#f4f6f9;
+border-radius:10px;
+padding:40px;
 }
 
-footer{
-    background:#0b1f3a;
-    color:white;
-    padding:40px 20px;
-    text-align:center;
+.contact p{
+text-align:center;
 }
 
-footer a{
-    color:#ffb000;
-    text-decoration:none;
+form{
+max-width:500px;
+margin:auto;
+margin-top:30px;
 }
 
 form input, form textarea{
-    width:100%;
-    padding:10px;
-    margin-top:8px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:15px;
+}
+
+form textarea{
+min-height:120px;
+resize:vertical;
 }
 
 form button{
-    background:#0b1f3a;
-    color:white;
-    padding:12px 20px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+background:#0b1f3a;
+color:white;
+padding:14px 25px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+width:100%;
 }
 
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:14px 18px;
-    border-radius:50px;
-    font-weight:bold;
-    text-decoration:none;
+form button:hover{
+background:#152f55;
 }
+
+/* FOOTER */
+
+footer{
+background:#0b1f3a;
+color:white;
+padding:50px 20px;
+text-align:center;
+margin-top:60px;
+}
+
+footer h3{
+margin-top:0;
+}
+
+footer a{
+color:#ffb000;
+text-decoration:none;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.whatsapp:hover{
+background:#1ebe5d;
+}
+
 </style>
 </head>
 
 <body>
 
+<nav>
+<h2>RoyalFlush Trading</h2>
+
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <header>
+
 <h1>RoyalFlush Trading (Pty) Ltd</h1>
-<p>Professional IT services, software development, networking and technical support solutions for businesses, institutions and organisations across South Africa.</p>
+
+<p>
+Professional IT services, software development, networking and technical support
+solutions for businesses and organisations across South Africa.
+</p>
+
 <a class="cta-btn" href="#contact">Request IT Support</a>
+
 </header>
 
-<section>
+<section class="about">
+
 <h2>About Us</h2>
+
 <p>
-RoyalFlush Trading (Pty) Ltd is an Information Technology solutions provider based in Bloemfontein, South Africa. Our team consists of experienced IT specialists and programmers with expertise in software development, systems administration, networking technologies and data solutions.
+RoyalFlush Trading (Pty) Ltd is an Information Technology solutions provider based in Bloemfontein, South Africa.
+Our team consists of experienced IT specialists and programmers with expertise in software development,
+systems administration, networking technologies and data solutions.
 </p>
+
 <p>
-We support organisations in both the public and private sector by designing, implementing and maintaining modern IT environments. Our goal is to improve productivity, efficiency and security through reliable technology solutions.
+We support organisations in both the public and private sector by designing, implementing and maintaining
+modern IT environments. Our goal is to improve productivity, efficiency and security through reliable technology solutions.
 </p>
+
 <p>
-We follow structured service delivery processes, clear reporting and preventative maintenance procedures to ensure accountability and dependable service. We are capable of supporting government departments, schools, municipalities, SMMEs and corporate clients under service level agreements (SLAs).
+We follow structured service delivery processes, clear reporting and preventative maintenance procedures
+to ensure accountability and dependable service.
 </p>
+
 </section>
 
-<section>
+<section id="services">
+
 <h2>Our Services</h2>
+
 <div class="services">
 
 <div class="service-box">
@@ -161,7 +302,7 @@ We follow structured service delivery processes, clear reporting and preventativ
 
 <div class="service-box">
 <h3>Database Solutions</h3>
-<p>Database setup, data organization, data storage systems and performance optimization.</p>
+<p>Database setup, data organization, storage systems and performance optimization.</p>
 </div>
 
 <div class="service-box">
@@ -170,9 +311,11 @@ We follow structured service delivery processes, clear reporting and preventativ
 </div>
 
 </div>
+
 </section>
 
 <section id="contact" class="contact">
+
 <h2>Contact Us</h2>
 
 <p><strong>Phone:</strong> <a href="tel:0817078147">081 707 8147</a></p>
@@ -191,23 +334,30 @@ Your message:
 <textarea name="message" required></textarea>
 </label>
 
-<button type="submit">Send</button>
+<button type="submit">Send Message</button>
 
 </form>
 
 </section>
 
 <footer>
+
 <h3>RoyalFlush Trading (Pty) Ltd</h3>
+
 <p>Bloemfontein, Free State, South Africa</p>
+
 <p>Phone: 081 707 8147 | Email: admin@royalflushtrading.co.za</p>
+
 <p>Business Hours: Monday – Friday 08:00 – 17:00</p>
+
 <p>© 2026 RoyalFlush Trading (Pty) Ltd. All Rights Reserved.</p>
+
 </footer>
 
 <a class="whatsapp" href="https://wa.me/27817078147" target="_blank">WhatsApp</a>
 
 <script>
+
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 
 e.preventDefault();
@@ -230,6 +380,7 @@ alert("Message sent successfully!");
 window.location.href="/thankyou.html";
 
 });
+
 </script>
 
 </body>

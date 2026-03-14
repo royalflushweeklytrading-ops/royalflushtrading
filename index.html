@@ -112,6 +112,33 @@ margin-bottom:15px;
 text-align:center;
 }
 
+/* STATS */
+
+.stats{
+background:white;
+text-align:center;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.stat-box{
+background:#0b1f3a;
+color:white;
+padding:30px;
+border-radius:10px;
+}
+
+.stat-box h3{
+font-size:40px;
+margin:0;
+color:#ffb000;
+}
+
 /* SERVICES */
 
 .services{
@@ -136,6 +163,48 @@ box-shadow:0 15px 35px rgba(0,0,0,0.12);
 .service-box h3{
 color:#0b1f3a;
 margin-top:0;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+background:#f4f6f9;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.testimonial-box{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* CREDIBILITY */
+
+.credibility{
+background:white;
+text-align:center;
+}
+
+.credibility p{
+max-width:800px;
+margin:auto;
+margin-bottom:40px;
+}
+
+.cred-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+text-align:left;
 }
 
 /* CONTACT */
@@ -194,10 +263,6 @@ color:white;
 padding:50px 20px;
 text-align:center;
 margin-top:60px;
-}
-
-footer h3{
-margin-top:0;
 }
 
 footer a{
@@ -264,13 +329,38 @@ systems administration, networking technologies and data solutions.
 
 <p>
 We support organisations in both the public and private sector by designing, implementing and maintaining
-modern IT environments. Our goal is to improve productivity, efficiency and security through reliable technology solutions.
+modern IT environments.
 </p>
 
-<p>
-We follow structured service delivery processes, clear reporting and preventative maintenance procedures
-to ensure accountability and dependable service.
-</p>
+</section>
+
+<section class="stats">
+
+<h2>Our Impact</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h3 class="counter" data-target="120">0</h3>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h3 class="counter" data-target="75">0</h3>
+<p>Business Clients</p>
+</div>
+
+<div class="stat-box">
+<h3 class="counter" data-target="10">0</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-box">
+<h3 class="counter" data-target="99">0</h3>
+<p>% Client Satisfaction</p>
+</div>
+
+</div>
 
 </section>
 
@@ -282,33 +372,86 @@ to ensure accountability and dependable service.
 
 <div class="service-box">
 <h3>Software Development</h3>
-<p>Custom business systems, web applications and automation tools tailored to organisational requirements.</p>
+<p>Custom business systems and web applications.</p>
 </div>
 
 <div class="service-box">
 <h3>IT Support & Maintenance</h3>
-<p>Onsite and remote technical support, troubleshooting, installations, upgrades and preventative maintenance.</p>
+<p>Onsite and remote technical support.</p>
 </div>
 
 <div class="service-box">
 <h3>Networking & Infrastructure</h3>
-<p>LAN, Wi-Fi, router configuration, connectivity troubleshooting and network installations.</p>
+<p>LAN, Wi-Fi and router configuration.</p>
 </div>
 
 <div class="service-box">
 <h3>Server Administration</h3>
-<p>Windows and Linux server setup, backups, monitoring, security policies and system management.</p>
+<p>Windows and Linux server setup.</p>
 </div>
 
 <div class="service-box">
 <h3>Database Solutions</h3>
-<p>Database setup, data organization, storage systems and performance optimization.</p>
+<p>Database systems and optimization.</p>
 </div>
 
 <div class="service-box">
 <h3>IT Consulting</h3>
-<p>Technology planning, IT procurement advice and infrastructure improvement strategies.</p>
+<p>Technology planning and IT procurement advice.</p>
 </div>
+
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>Client Feedback</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-box">
+<p>
+"RoyalFlush Trading helped modernize our office network and improved our system performance."
+</p>
+<strong>– Business Client</strong>
+</div>
+
+<div class="testimonial-box">
+<p>
+"Their IT support is reliable and professional."
+</p>
+<strong>– School IT Administrator</strong>
+</div>
+
+<div class="testimonial-box">
+<p>
+"Excellent technical expertise and dependable service."
+</p>
+<strong>– Corporate Client</strong>
+</div>
+
+</div>
+
+</section>
+
+<section class="credibility">
+
+<h2>Trusted Technology Partner</h2>
+
+<p>
+RoyalFlush Trading supports government institutions, schools, SMMEs
+and corporate clients across South Africa.
+</p>
+
+<div class="cred-grid">
+
+<div>✔ Professional IT support services</div>
+<div>✔ Structured service delivery processes</div>
+<div>✔ Public & private sector experience</div>
+<div>✔ Service level agreements available</div>
+<div>✔ Secure infrastructure solutions</div>
+<div>✔ Scalable technology environments</div>
 
 </div>
 
@@ -358,6 +501,8 @@ Your message:
 
 <script>
 
+/* CONTACT FORM */
+
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 
 e.preventDefault();
@@ -378,6 +523,37 @@ body:JSON.stringify(data)
 alert("Message sent successfully!");
 
 window.location.href="/thankyou.html";
+
+});
+
+
+/* COUNTER ANIMATION */
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+const updateCount = () => {
+
+const target = +counter.getAttribute("data-target");
+const count = +counter.innerText;
+
+const increment = target / 100;
+
+if(count < target){
+
+counter.innerText = Math.ceil(count + increment);
+setTimeout(updateCount,20);
+
+}else{
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCount();
 
 });
 
